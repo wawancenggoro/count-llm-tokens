@@ -1,3 +1,4 @@
+# Count LLM Tokens
 This repository can be used to count the number of input tokens from an open source models in huggingface.
 
 Command:
