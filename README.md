@@ -2,7 +2,15 @@
 
 This repository can be used to count the number of input tokens from an open source models in huggingface.
 
-Command:
+## Installation
+
+Run the following command to install:
+
+`pip install -r requirements.txt`
+
+## Run the token counter
+
+Run the following command to run the token counter:
 
 `python tokenizer.py --model [MODEL_NAME] --textfile [PATH_TO_TEXT_FILE]`
 
