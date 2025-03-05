@@ -36,14 +36,18 @@ def main():
     # Read the file and print its contents
     file_contents = read_file(args.textfile)
     if file_contents:
+        word_count = len(file_contents.split())
         tokenizer = AutoTokenizer.from_pretrained(args.model)
         print("==================================")
         print("-> Converting text to tokens...")
         print("-> Done")
         tokens = tokenizer(file_contents)
         tokens_num = len(tokens[0])
+        tokens_to_words_ratio = tokens_num/word_count
         print("==================================")
-        print(f"Number of tokens: {tokens_num}")
+        print(f"Number of words      : {word_count}")
+        print(f"Number of tokens     : {tokens_num}")
+        print(f"Tokens to words ratio: {tokens_to_words_ratio:.2f}")
         print("==================================")
 
 if __name__ == "__main__":
